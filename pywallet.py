@@ -2970,8 +2970,8 @@ if 'twisted' not in missing_dep:
 							return "Bad private key"
 
 						secret = GetSecret(pkey)
-						private_key = GetPrivKey(pkey)
-						public_key = GetPubKey(pkey)
+						private_key = GetPrivKey(pkey, compressed)
+						public_key = GetPubKey(pkey, compressed)
 						addr = public_key_to_bc_address(public_key)
 
 						if need & 1:
